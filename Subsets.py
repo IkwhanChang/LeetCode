@@ -18,3 +18,12 @@ class Solution:
         return output
 
         
+    def subsets():
+        output = [[]]
+        k = 0
+        for i,no in enumerate(nums):
+            n = len(output)
+            for j in range(n):
+                tmp = output[j][:] + [no]
+                output.append(tmp)
+        return output
